@@ -22,5 +22,13 @@
   </div>
   <script type="text/javascript" src="https://documentcloud.adobe.com/view-sdk/main.js">
   </script>
+   <script>
+    const inlineConfig = {
+  defaultViewMode: "FIT_PAGE", //default mode is set to fit_page
+  embedMode: "IN_LINE", //display mode is set to inline
+};
+const PDFname = "inline";
+  viewPdf(inlineConfig, PDFname);
+  </script>   
 </body>
 </html>
