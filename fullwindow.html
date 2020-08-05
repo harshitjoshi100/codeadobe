@@ -11,11 +11,24 @@
     />
     <script type="text/javascript" src="./index.js"></script>
   </head>
-  <body id="fullwindow" style="margin: 0px;">
+  <body id="fullwindow">
     <div id="adobe-dc-view"></div>
     <script
       type="text/javascript"
       src="https://documentcloud.adobe.com/view-sdk/main.js"
     ></script>
+     <script>
+      const fullWindowConfig = {
+        defaultViewMode: "FIT_PAGE", //default mode fit_page
+        showPageControls: true, //controls
+        showAnnotationTools: true, //annotation tools
+        showDownloadPDF: true, //download option
+        showPrintPDF: true, //print option
+        showLeftHandPanel: false, //remove other options
+        dockPageControls: true, //dock
+      };
+      const PDFname = "fullwindow";
+      viewPdf(fullWindowConfig, PDFname);
+    </script>
   </body>
 </html>
