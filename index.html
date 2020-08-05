@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js)-->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=Google_Analytics_Tracking_Id"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-171409849-1");
+    </script>
+    <!--End of global site tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="PDF" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.0.1/normalize.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=PT+Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>PDF VIEWER</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div class="tabbed">
+      <input type="radio" name="tabs" id="tab-nav-1" checked />
+      <label for="tab-nav-1">Full Window</label>
+      <input type="radio" name="tabs" id="tab-nav-2" />
+      <label for="tab-nav-2">Sized Container</label>
+      <input type="radio" name="tabs" id="tab-nav-3" />
+      <label for="tab-nav-3">Inline</label>
+      <div class="tabs">
+        <div>
+          <h2>Full Window</h2>
+          <p>
+            <iframe src="fullwindow.html" height="510"></iframe>
+          </p>
+        </div>
+        <div>
+          <h2>Sized Container</h2>
+          <p>
+            <iframe src="sized.html" height="510"></iframe>
+          </p>
+        </div>
+        <div>
+          <h2>Inline</h2>
+          <p>
+            <iframe src="inline.html" height="510"></iframe>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
