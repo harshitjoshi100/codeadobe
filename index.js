@@ -141,10 +141,12 @@ if (document.getElementById("tab-nav-1") != null) {
 if (document.getElementById("fullwindow") != null) {
   PDFname = "fullwindow";
   viewPdf(fullWindowConfig, PDFname);
-} else if (document.getElementById("sized") != null) {
+} 
+if (document.getElementById("sized") != null) {
   PDFname = "sized";
   viewPdf(sizedConfig, PDFname);
-}else{
+}
+if(document.getElementById("inline") != null){
   PDFname = "inline";
   viewPdf(inlineConfig, PDFname);
 }
