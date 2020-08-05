@@ -45,36 +45,6 @@ const inlineConfig = {
   embedMode: "IN_LINE", //display mode is set to inline
 };
 
-/// for index.html tabs
-//if (document.getElementById("tab-nav-1") != null) {
-//  document.querySelector("#tab-nav-1").addEventListener("click", () => {
- //   PDFname = "fullwindow";
- //   viewPdf(fullWindowConfig, PDFname);
- // });
-  //document.querySelector("#tab-nav-2").addEventListener("click", () => {
-   // PDFname = "sized";
-   // viewPdf(sizedConfig, PDFname);
-  //});
-  //document.querySelector("#tab-nav-3").addEventListener("click", () => {
-  //  PDFname = "inline";
-   // viewPdf(inlineConfig, PDFname);
-  //});
-//}
-
-/// for individual view links
-if (document.getElementById("fullwindow") != null) {
-  PDFname = "fullwindow";
-  viewPdf(fullWindowConfig, PDFname);
-} 
-if (document.getElementById("sized") != null) {
-  PDFname = "sized";
-  viewPdf(sizedConfig, PDFname);
-}
-if (document.getElementById("inline") != null){
-  PDFname = "inline";
-  viewPdf(inlineConfig, PDFname);
-}
-
 /// main view function
 function viewPdf(viewerConfig, name_pdf) {
   document.addEventListener("adobe_dc_view_sdk.ready", function () {
@@ -94,7 +64,7 @@ function viewPdf(viewerConfig, name_pdf) {
           },
         },
         /* Pass meta data of file */
-        metaData: {
+        metaData: {`
           /* file name */
           fileName: name_pdf + ".pdf",
         },
@@ -151,3 +121,33 @@ function viewPdf(viewerConfig, name_pdf) {
     );
   });
 }
+//for index.html tabs
+if (document.getElementById("tab-nav-1") != null) {
+  document.querySelector("#tab-nav-1").addEventListener("click", () => {
+    PDFname = "fullwindow";
+    viewPdf(fullWindowConfig, PDFname);
+  });
+  document.querySelector("#tab-nav-2").addEventListener("click", () => {
+    PDFname = "sized";
+    viewPdf(sizedConfig, PDFname);
+  });
+  document.querySelector("#tab-nav-3").addEventListener("click", () => {
+   PDFname = "inline";
+    viewPdf(inlineConfig, PDFname);
+  });
+}
+
+/// for individual view links
+if (document.getElementById("fullwindow") != null) {
+  PDFname = "fullwindow";
+  viewPdf(fullWindowConfig, PDFname);
+} 
+if (document.getElementById("sized") != null) {
+  PDFname = "sized";
+  viewPdf(sizedConfig, PDFname);
+}
+if (document.getElementById("inline") != null){
+  PDFname = "inline";
+  viewPdf(inlineConfig, PDFname);
+}
+
