@@ -26,24 +26,6 @@ const CLIENT_ID = "aa108adf83e246138b99aa9c97ee17b8"; //UPDATE YOUR ADOBE EMBED 
 ga("create", TRACKING_ID, "auto");
 ga("send", "pageview");
 //==========================================================
-//index.js code
-const fullWindowConfig = {
-  defaultViewMode: "FIT_PAGE", //default mode fit_page
-  showPageControls: true, //controls
-  showAnnotationTools: true, //annotation tools
-  showDownloadPDF: true, //download option
-  showPrintPDF: true, //print option
-  showLeftHandPanel: false, //remove other options
-  dockPageControls: true, //dock
-};
-const sizedConfig = {
-  defaultViewMode: "FIT_PAGE", //default mode is set to fit_page
-  embedMode: "SIZED_CONTAINER", //display mode is set to sized-container
-};
-const inlineConfig = {
-  defaultViewMode: "FIT_PAGE", //default mode is set to fit_page
-  embedMode: "IN_LINE", //display mode is set to inline
-};
 
 /// main view function
 function viewPdf(viewerConfig, name_pdf) {
@@ -120,34 +102,4 @@ function viewPdf(viewerConfig, name_pdf) {
       }
     );
   });
-}
-//for index.html tabs
-if (document.getElementById("tab-nav-1") != null) {
-  document.querySelector("#tab-nav-1").addEventListener("click", () => {
-    PDFname = "fullwindow";
-    viewPdf(fullWindowConfig, PDFname);
-  });
-  document.querySelector("#tab-nav-2").addEventListener("click", () => {
-    PDFname = "sized";
-    viewPdf(sizedConfig, PDFname);
-  });
-  document.querySelector("#tab-nav-3").addEventListener("click", () => {
-   PDFname = "inline";
-    viewPdf(inlineConfig, PDFname);
-  });
-}
-
-/// for individual view links
-if (document.getElementById("fullwindow") != null) {
-  PDFname = "fullwindow";
-  viewPdf(fullWindowConfig, PDFname);
-} 
-if (document.getElementById("sized") != null) {
-  PDFname = "sized";
-  viewPdf(sizedConfig, PDFname);
-}
-if(document.getElementById("inline") != null){
-  PDFname = "inline";
-  viewPdf(inlineConfig, PDFname);
-}
-
+};
