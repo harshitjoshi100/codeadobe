@@ -42,7 +42,7 @@ function viewPdf(viewerConfig, name_pdf) {
         content: {
           //enter the Location of PDF which needs to be displayed
           location: {
-            url: "./pdfFiles/website.pdf",
+            url: "./pdfFiles/output.pdf",
           },
         },
         /* Pass meta data of file */
