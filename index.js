@@ -68,7 +68,7 @@ if (document.getElementById("fullwindow") != null) {
 } else if (document.getElementById("sized") != null) {
   PDFname = "sized";
   viewPdf(sizedConfig, PDFname);
-} else {
+} else if (document.getElementById("inline") != null) {
   PDFname = "inline";
   viewPdf(inlineConfig, PDFname);
 }
