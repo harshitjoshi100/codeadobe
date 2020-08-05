@@ -20,5 +20,13 @@
         </footer></div>  
     <script type="text/javascript" src="https://documentcloud.adobe.com/view-sdk/main.js">
     </script>
+     <script>
+      const sizedConfig = {
+        defaultViewMode: "FIT_PAGE", //default mode is set to fit_page
+        embedMode: "SIZED_CONTAINER", //display mode is set to sized-container
+      };
+    const PDFname = "sized";
+    viewPdf(sizedConfig, PDFname);
+    </script>   
   </body>
 </html>
