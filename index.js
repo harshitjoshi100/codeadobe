@@ -64,7 +64,7 @@ function viewPdf(viewerConfig, name_pdf) {
           },
         },
         /* Pass meta data of file */
-        metaData: {`
+        metaData: {
           /* file name */
           fileName: name_pdf + ".pdf",
         },
